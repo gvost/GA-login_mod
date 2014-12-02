@@ -1,0 +1,22 @@
+<div class="container">
+<h1>User Detail</h1>
+</div>
+<div class="secondContainer">
+<p>Username: <%= @users.username %></p> 
+<div class="avatar detail" style="background-image:url('<%= @users.url %>');"></div>
+<!-- <img src="<%= @users.url %>" alt="<%= @users.username %>"> -->
+<p>First Name: <%= @users.first_name %></p> 
+<p>Last Name: <%= @users.last_name %></p> 
+<p>Email Address: <%= @users.email %></p> 
+<p>Phone Number: <%= @users.phone_number %></p> 
+
+<br><br><br>
+<%= link_to 'Edit User', "/users/#{@users.id}/edit" %> <br><br>
+<%= link_to 'Delete User?', "/users/#{@users.id}", method: :delete %>
+
+
+
+<%if flash[:notice]%>
+	<p><%= flash[:notice]%></p>
+<%end%>
+</div>

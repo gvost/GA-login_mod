@@ -1,0 +1,27 @@
+<div class="container">
+	<h1>Users</h1>
+
+	<a href="/users/new">Create a new user</a>
+</div>
+<table>
+	<tr>
+		<th>Profile Picture</th>
+		<th>Username</th>
+		<th>First Name</th>
+		<th>Last Name</th>
+		<th>Email Address</th>
+		<th>Phone Number</th>
+	</tr>
+	
+		<% @users.each do |user| %>
+		<tr>
+			<td><!-- <img src="<%= user.url %>" alt="<%= user.url %>" height="80px" height="80px"> --> <div class="avatar" style="background-image:url('<%= user.url %>');"></div></td>
+			<td><%= link_to user.username, "/users/#{user.id}" %></td>
+			<td><%= user.first_name %></td>
+			<td><%= user.last_name %></td>
+			<td><%= user.email %></td>
+			<td><%= user.phone_number %></td>
+		</tr>
+		<% end %>
+	
+</table>

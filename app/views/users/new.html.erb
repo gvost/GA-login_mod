@@ -1,0 +1,38 @@
+<div class="container"> 
+<h1>Create a User</h1>
+</div>
+<div class="secondContainer">
+<%= form_for @users do |user| %>
+	
+	<%= user.label :url %>
+	<br>
+	<%= user.text_field :url %>
+	<br><br>
+	<%= user.label :username %>
+	<br>
+	<%= user.text_field :username %>
+	<br><br>
+	<%= user.label :password %>
+	<br>
+	<%= user.password_field :password %>
+	<br><br>
+	<%= user.label :first_name %>
+	<br>
+	<%= user.text_field :first_name %>
+	<br><br>
+	<%= user.label :last_name %>
+	<br>
+	<%= user.text_field :last_name %>
+	<br><br>
+	<%= user.label :email %>
+	<br>
+	<%= user.text_field :email %>
+	<br><br>
+	<%= user.label :phone_number %>
+	<br>	
+	<%= user.telephone_field :phone_number %>
+	<br><br>
+	<%= user.submit 'Create User' %>
+
+<%end%>
+</div>
